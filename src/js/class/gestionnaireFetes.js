@@ -69,9 +69,9 @@ class GestionnaireFetes {
 					: '';
 
 			affichage += `
-      <div class="container">
-	      <div class="description">
-	      	<div class="text">
+      <div class="container2">
+	      <div class="description2">
+	      	<div class="text2">
 			  <p><span class="dino">${aniv.prenom.toUpperCase()}</span> [${aniv.date[0]}/${
 				aniv.date[1]
 			}/${

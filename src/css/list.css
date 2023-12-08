@@ -103,3 +103,31 @@ body .description .text:active{
 .grabbing {
 	cursor: grabbing!important;
 }
+
+#sortable-list{
+	touch-action: none;
+}
+
+/*Anniversaire*/
+.container2{
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 1rem;
+	display: flex;
+	overflow: hidden;
+	max-width: 100%;
+	margin: 5px;
+}
+
+.container2 .description2 {
+	width: 100%;
+	background-color: white;
+}
+.container2 .description2 .text2 {
+	width: 100%;
+	margin-left: 1rem;
+	max-width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
