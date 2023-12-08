@@ -239,7 +239,7 @@ document.addEventListener('click', (event) => {
 		let date = parseInt(event.target.textContent); // ex : 1 2 3
 		let year = parseInt(container.querySelector('.paraYear').textContent);
 		let month = container.querySelector('.paraMonth').textContent;
-		month = convertMoisLettreEnInt(newYear, month);
+		month = new Year().convertMoisLettreEnInt(newYear, month);
 		localStorage.setItem(
 			'dateCalendar',
 			JSON.stringify([date, month, year])
