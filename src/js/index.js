@@ -8,7 +8,7 @@ import GestionnaireFetes from './class/gestionnaireFetes';
 import Button from '../js/class/button';
 import DragAndDrop from './class/dragAndDrop';
 
-// AFFICHAGE LISTS AU DEBUT
+// AFFICHAGE DE LA LISTE TODO ET CUSTUMISATION
 window.addEventListener('load', function () {
 	localStorage.setItem('typeList', JSON.stringify('todo'));
 	let typeList = JSON.parse(localStorage.getItem('typeList'));
@@ -65,7 +65,7 @@ document.querySelector('.modal_content').appendChild(diapoContainer);
 
 /*---------- GESTION DES CLICKS-------------*/
 
-// TRIER LES LISTS EN DRAG AND DROP
+// TRIE DES LISTS EN DRAG AND DROP
 new DragAndDrop();
 
 document.addEventListener('click', (event) => {
