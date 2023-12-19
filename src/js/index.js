@@ -8,13 +8,13 @@ import GestionnaireFetes from './class/gestionnaireFetes';
 import Button from '../js/class/button';
 import DragAndDrop from './class/dragAndDrop';
 
-// AFFICHAGE DE LA LISTE TODO ET CUSTUMISATION
+// AFFICHAGE LISTS AU DEBUT
 window.addEventListener('load', function () {
 	localStorage.setItem('typeList', JSON.stringify('todo'));
 	let typeList = JSON.parse(localStorage.getItem('typeList'));
 	document.querySelector('.toDo').classList.remove('blue_light');
 	document.querySelector('.toDo').classList.add('btn-santa');
-	let newList = new GestionnaireLists(typeList).afficherList();
+	new GestionnaireLists(typeList).afficherList();
 });
 
 // OBTENTION DE LA DATE
@@ -65,7 +65,7 @@ document.querySelector('.modal_content').appendChild(diapoContainer);
 
 /*---------- GESTION DES CLICKS-------------*/
 
-// TRIE DES LISTS EN DRAG AND DROP
+// TRIER LES LISTS EN DRAG AND DROP
 new DragAndDrop();
 
 document.addEventListener('click', (event) => {
@@ -99,18 +99,15 @@ infos.forEach((info) => {
 	document.addEventListener('click', (event) => {
 		let clickedElement = event.target;
 		// NETTOYAGE SECTION ANNIVERSAIRE
-		if (clickedElement.classList.contains("aniv")) {
+		if (clickedElement.classList.contains('aniv')) {
 			document.querySelector('.input').style.display = 'none';
-			document.querySelector('.fa-calendar-days').style.display =
-				'none';
+			document.querySelector('.fa-calendar-days').style.display = 'none';
 		} else {
 			document.querySelector('.input').style.display = 'flex';
-			document.querySelector('.fa-calendar-days').style.display =
-				'flex';
+			document.querySelector('.fa-calendar-days').style.display = 'flex';
 		}
 		if (clickedElement.classList.contains(`${info.class}`)) {
 			try {
-				
 				new Button().changerStyles(clickedElement);
 				localStorage.setItem(
 					'typeList',
